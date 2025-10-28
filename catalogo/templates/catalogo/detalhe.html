@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Detalhe - {{ quadrinho.titulo }}{% endblock %}
+{% block content %}
+<h1>{{ quadrinho.titulo }} <small class="text-muted">#{{ quadrinho.numero }}</small></h1>
+<p><strong>Editora:</strong> {{ quadrinho.get_editora_display }}</p>
+<p><strong>Autor:</strong> {{ quadrinho.autor }}</p>
+<p><strong>Data de lançamento:</strong> {{ quadrinho.data_lancamento }}</p>
+<hr>
+<p>{{ quadrinho.descricao|linebreaks }}</p>
+
+<a class="btn btn-secondary" href="{% url 'quadrinho-lista' %}">Voltar</a>
+<a class="btn btn-primary" href="{% url 'quadrinho-editar' quadrinho.pk %}">Editar</a>
+<a class="btn btn-danger" href="{% url 'quadrinho-excluir' quadrinho.pk %}">Excluir</a>
+{% endblock %}

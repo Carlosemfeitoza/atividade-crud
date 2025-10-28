@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Lista de Quadrinhos{% endblock %}
+{% block content %}
+<h1>Quadrinhos Cadastrados</h1>
+
+<a href="{% url 'quadrinho-adicionar' %}" class="btn btn-success">+ Adicionar Quadrinho</a>
+<br><br>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Editora</th>
+      <th>Autor</th>
+      <th>Ano</th>
+      <th>Universo</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for quadrinho in quadrinhos %}
+    <tr>
+      <td><a href="{% url 'quadrinho-detalhe' quadrinho.pk %}">{{ quadrinho.titulo }}</a></td>
+      <td>{{ quadrinho.editora }}</td>
+      <td>{{ quadrinho.autor }}</td>
+      <td>{{ quadrinho.data_lancamento }}</td>
+      <td>{{ quadrinho.descricao|truncatechars:50 }}</td>
+      <td>
+        <a href="{% url 'quadrinho-editar' quadrinho.pk %}" class="btn btn-primary btn-sm">Editar</a>
+        <a href="{% url 'quadrinho-excluir' quadrinho.pk %}" class="btn btn-danger btn-sm">Excluir</a>
+      </td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="6">Nenhum quadrinho cadastrado.</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
