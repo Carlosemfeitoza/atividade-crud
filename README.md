@@ -78,8 +78,6 @@ manage.py # Gerenciador do Django
 requirements.txt # Dependências do projeto
 README.md
 
-yaml
-Copiar código
 
 ---
 
@@ -101,32 +99,26 @@ git clone https://github.com/seuusuario/atividade-crud-quadrinhos.git
 Entre na pasta do projeto:
 
 bash
-Copiar código
 cd Atividade-Crud
 Instale as dependências:
 
 bash
-Copiar código
 pip install -r requirements.txt
 Execute as migrações do banco:
 
 bash
-Copiar código
 python manage.py migrate
 Crie um superusuário (opcional, para acessar o admin):
 
 bash
-Copiar código
 python manage.py createsuperuser
 Inicie o servidor:
 
 bash
-Copiar código
 python manage.py runserver
 Acesse no navegador:
 
 cpp
-Copiar código
 http://127.0.0.1:8000/
 
 🖼 Prints das Telas
