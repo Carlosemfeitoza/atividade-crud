@@ -59,7 +59,7 @@ Sistema web completo desenvolvido em Django utilizando Class-Based Views (CBV) p
 ---
 
 ## 📂 Estrutura do Projeto
-
+```plaintext
 catalogo/ # Aplicação principal
 ├─ migrations/ # Migrações do banco
 ├─ templates/catalogo/ # Templates HTML
@@ -77,7 +77,7 @@ static/ # Arquivos estáticos
 manage.py # Gerenciador do Django
 requirements.txt # Dependências do projeto
 README.md
-
+```
 
 ---
 
@@ -120,7 +120,7 @@ Acesse no navegador:
 
 cpp
 http://127.0.0.1:8000/
-
+```
 🖼 Prints das Telas
 
 ![Página Inicial](prints/pagina_inicial.png)
